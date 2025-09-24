@@ -24,16 +24,17 @@ def test_e2e(browserInstance,test_list_item):
     checkout_confirmation.checkout()
     checkout_confirmation.enter_delivery_address("ind")
     checkout_confirmation.validate_order()
+
     print(shop_page.getTitle()) #getting this error while running in terminal TypeError: 'str' object is not callable
     print(shop_page.getTitle())  # getting this error while running in terminal TypeError: 'str' object is not callable
     print(shop_page.getTitle())  # getting this error while running in terminal TypeError: 'str' object is not callable
 
-   # driver.find_element(By.ID,"username").send_keys("rahulshettyacademy")
-    #driver.find_element(By.NAME,"password").send_keys("learning")
-   # driver.find_element(By.ID,"signInBtn").click()
+    driver.find_element(By.ID,"username").send_keys("rahulshettyacademy")
+    driver.find_element(By.NAME,"password").send_keys("learning")
+    driver.find_element(By.ID,"signInBtn").click()
 
-   # driver.find_element(By.CSS_SELECTOR, "a[href*='shop']").click()
-   # products = driver.find_elements(By.XPATH, "//div[@class='card h-100']")
+    driver.find_element(By.CSS_SELECTOR, "a[href*='shop']").click()
+    products = driver.find_elements(By.XPATH, "//div[@class='card h-100']")
 
     #for product in products:
      #   productName = product.find_element(By.XPATH, "div/h4/a").text
@@ -50,5 +51,5 @@ def test_e2e(browserInstance,test_list_item):
    # driver.find_element(By.XPATH, "//div[@class='checkbox checkbox-primary']").click()
    # driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
 
-   # successText = driver.find_element(By.CLASS_NAME, "alert-success").text
-   # assert "Success! Thank you!" in successText
+    successText = driver.find_element(By.CLASS_NAME, "alert-success").text
+    assert "Success! Thank you!" in successText
