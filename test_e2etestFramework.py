@@ -16,10 +16,10 @@ def test_e2e(browserInstance,test_list_item):
     driver=browserInstance
    # driver.get("https://rahulshettyacademy.com/loginpagePractise/")
     loginPage=LoginPage(driver)
-   # print(loginPage.getTitle()) #getting this error while running in terminal TypeError: 'str' object is not callable
+    print(loginPage.getTitle()) #getting this error while running in terminal TypeError: 'str' object is not callable
     shop_page=loginPage.login(test_list_item["userEmail"],test_list_item["userPassword"])
     shop_page.add_product_to_cart(test_list_item["productName"])
-   # print(shop_page.getTitle()) #getting this error while running in terminal TypeError: 'str' object is not callable
+    print(shop_page.getTitle()) #getting this error while running in terminal TypeError: 'str' object is not callable
     checkout_confirmation=shop_page.goToCart()
     checkout_confirmation.checkout()
     checkout_confirmation.enter_delivery_address("ind")
