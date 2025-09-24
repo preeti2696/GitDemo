@@ -24,7 +24,9 @@ def test_e2e(browserInstance,test_list_item):
     checkout_confirmation.checkout()
     checkout_confirmation.enter_delivery_address("ind")
     checkout_confirmation.validate_order()
-
+    print(shop_page.getTitle()) #getting this error while running in terminal TypeError: 'str' object is not callable
+    print(shop_page.getTitle())  # getting this error while running in terminal TypeError: 'str' object is not callable
+    print(shop_page.getTitle())  # getting this error while running in terminal TypeError: 'str' object is not callable
 
    # driver.find_element(By.ID,"username").send_keys("rahulshettyacademy")
     #driver.find_element(By.NAME,"password").send_keys("learning")
